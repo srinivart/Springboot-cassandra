@@ -1,0 +1,199 @@
+ssh-keygen -t rsa -C "srinivart@gmail.com"   
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/srinivaspanaganti/.ssh/id_rsa): 
+Created directory '/Users/srinivaspanaganti/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/srinivaspanaganti/.ssh/id_rsa.
+Your public key has been saved in /Users/srinivaspanaganti/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:GI4qRhVF5g4GwwT5d3H/eVHxCUQaSNOA5kBF/jJ791o srinivart@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|== .+=ooo++.o+ ..|
+|..o +.oo....o . +|
+| . + .=+ . .   o.|
+|  + +o.+. .   .  |
+| . ..oooS. . . . |
+|.  .    +   o .  |
+|...    . . . E   |
+|..      . . o    |
+|           ...   |
++----[SHA256]-----+
+
+
+
+
+
+
+
+—> Entered no password
+
+
+
+
+
+cat /Users/srinivaspanaganti/.ssh/id_rsa.pub
+———>
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDReNttqp/ZVC6RBSVqVR+o+DeDnGgYrDdsnaTCOMO8dPmuxFd1nZimzeAgL2nGsCzE3PqyRyuJLROa4ciL2hQwH+WSzZdiUFoQ7ls/oXX6SDCYgzzdTB8BqOtrDceuVKqwmzQVBrgTmDGDecMfghpbrBiTrgHBHZR/i+n7wY3YkeZrGb+NEuXRgjcAUtaFAur1mC2i0Hf0ZxblhhQ5WIv85/EyNTDxZA00jcFztosNVl7cLmWrLywayRppa2MYYoq5UIWgm/g4+i16YjNyjzB4AEATSyHQl2QfHHPTE9869ChF2Q170du0xZUxwrPfPM2VlSyL+zeE5EeF9hdtEdsD3yxjT3Vvf0TZgdY96HbKmASbTMW/doWaI/PZjO7EUP8nKDwPDhkpA7cz6+5TLhk7NAnUh/JA210xarbGnTqL0p6GJy4PWB1Iagx00kDLHipJXsUArGz8cxpOmnp8UzMLL3frvzkuX4hhWyiabkiOIESUL2ZekokL5hvmm2IPHLs= srinivart@gmail.com
+
+
+
+
+
+——>
+Add this in Git hub account
+
+Settings > SSH and GPG keys
+
+
+ADD new ssh key
+
+
+
+
+
+
+Git and GitHub
+What's a developer without Git? To install, simply run:
+$ brew install git
+When done, to test that it installed fine you can run:
+$ git --version
+And $ which git should output /usr/local/bin/git.
+
+
+
+
+
+
+Next, we'll define your Git user (should be the same name and email you use for GitHub):
+$ git config --global user.name "Your Name Here"
+$ git config --global user.email "your_email@youremail.com"
+They will get added to your .gitconfig file.
+To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described here:
+$ git config --global credential.helper osxkeychain
+
+
+
+
+
+
+
+git config --list
+credential.helper=osxkeychain
+
+
+——>
+Nothing is there 
+
+
+
+
+Add below
+—>
+
+
+
+$ git config --global user.name “srinivart”
+
+$ git config --global user.email “srinivart@gmail.com”
+
+$ git config --global credential.helper osxkeychain
+
+
+git config --list
+
+
+
+
+
+
+git config --list  
+——————                                 
+credential.helper=osxkeychain
+user.name=“srinivart”
+user.email=“srinivart@gmail.com”
+credential.helper=osxkeychain
+
+
+
+
+
+Push the code
+——
+
+/Users/srinivaspanaganti/Music/Reactive
+
+
+
+
+
+git clone git@github.com:srinivart/Springboot-cassandra.git
+Cloning into 'Springboot-cassandra'...
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.234.176.102' (RSA) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+
+
+
+
+
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   HELP.md
+	new file:   Notes
+	new file:   mvnw
+	new file:   mvnw.cmd
+	new file:   pom.xml
+	new file:   springboot-cassandra.iml
+	new file:   src/main/java/com/srinivart/ResouceNotFoundException.java
+	new file:   src/main/java/com/srinivart/SpringbootCassandraApplication.java
+	new file:   src/main/java/com/srinivart/controller/ProductController.java
+	new file:   src/main/java/com/srinivart/model/Product.java
+	new file:   src/main/java/com/srinivart/repository/ProductRepository.java
+	new file:   src/main/resources/application.properties
+	new file:   src/main/resources/application.yml
+	new file:   src/test/java/com/srinivart/SpringbootCassandraApplicationTests.java
+	new file:   target/classes/application.properties
+	new file:   target/classes/application.yml
+	new file:   target/classes/com/srinivart/ResouceNotFoundException.class
+	new file:   target/classes/com/srinivart/SpringbootCassandraApplication.class
+	new file:   target/classes/com/srinivart/controller/ProductController.class
+	new file:   target/classes/com/srinivart/model/Product.class
+	new file:   target/classes/com/srinivart/repository/ProductRepository.class
+	new file:   target/test-classes/com/srinivart/SpringbootCassandraApplicationTests.class
+
+
+
+
+
+git commit -m "spring boot cassandra"
+
+
+
+
+git push
+
+
+
+
+
+
+References
+————
+
+https://sourabhbajaj.com/mac-setup/Git/README.html
+
+
+
